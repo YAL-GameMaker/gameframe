@@ -1,0 +1,10 @@
+{
+    "indentWithTabs": true,
+    "linterPrefs": {
+        "requireFields": true,
+        "specTypeInst": true,
+        "specTypeInstSubTopLevel": true,
+        "specTypeVar": true
+    },
+    "templateStringScript": "sfmt"
+}

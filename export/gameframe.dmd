@@ -1,0 +1,145 @@
+```set template default.html```
+```set title gameframe cheat sheet```
+```set autoapi ext```
+```set tag:defcode gml```
+```set intro
+This is a "cheat sheet" for "gameframe_tools" extension by YellowAfterlife.  
+The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemaker-gameframe).
+```
+```raw
+<style>
+.main {
+	background-color: #889EC5;
+}
+#night:checked + .main {
+	background-color: #405070;
+}
+</style>
+```
+#[Introduction]() {
+	Gameframe is an extension gives GameMaker games a custom window border
+	that acts like a native one.
+	
+	That includes the minimize/maximize buttons,
+	moving/resizing the window,
+	common (and less common) keyboard and mouse shortcuts,
+	and even the window shadow and rounded borders on Windows 11.
+	
+	Having a custom border+caption subsequently allows for a few things: --{
+		- Toggling window border on demand
+		- Supporting exclusive fullscreen, borderless fullscreen, and windowed modes.\
+		  (which as of writing this most players expect from you)
+		- Not freezing the application while the user is dragging the window around.\
+		  (essential for competitive online games)
+		- Customizing the title bar and/or border\
+		  (now that it's game code that's drawing them)
+	}
+	
+}
+#[Setting up]() {
+	##{
+	-	Disable the default window border in
+		Game Options - Windows - Graphics
+		<!-- --{
+		-	GMS1: Global Game Settings - Windows - Graphics
+		-	GMS2 and GM2022+: Game Options - Windows - Graphics
+		}-->
+		("Borderless window" checkbox)
+	-	Create a new persistent object for the extension system,
+		or add code to your existing global controller object:
+		
+		*Create:*
+		```
+		gameframe_init();
+		```
+		
+		*Step:*
+		```
+		gameframe_update();
+		```
+		
+		*Draw GUI:*
+		```
+		gameframe_draw()
+		```
+	}
+}
+#[Common use]() {
+	Per introduction, Gameframe draws its custom interface on the GUI layer.
+	
+	As result, the caption may draw over your game elements.
+	
+	To prevent the frame from being "click-through", you have the
+	[gameframe_mouse_over_frame] variable that you can check for,
+	but there is also a trick to cut down on work required:
+	you can show the game when it's needed (such as when a pause menu is open)
+	and disable it at other times. Adjusted code could look like this:
+	
+	*Create:*
+	```
+	gameframe_init();
+	```
+	*Step:*
+	```
+	var _show_frame = (global.paused
+		|| instance_exists(objMainMenu)
+		// ... other checks that justify a state where a frame is desired
+	)
+	gameframe_can_input = _show_frame;
+	
+	var _target_alpha;
+	if (_show_frame) _target_alpha = 1; else _target_alpha = 0; // or ?:
+	gameframe_alpha = lerp(gameframe_alpha, _target_alpha, 0.1);
+	
+	gameframe_update();
+	```
+	*Draw:*
+	```
+	if (gameframe_alpha >= 1/255) gameframe_draw();
+	```
+	
+	This would (instantly) disable frame input as soon as game resumes
+	and quickly fade out the frame, then fade it back when the user pauses
+	or quits to the main menu.
+}
+#[Callbacks](callbacks) {
+	%[gameframe_init]
+	%[gameframe_update]
+	%[gameframe_draw]
+}
+%[gameframe_config]
+%[gameframe_state]
+%[gameframe_caption]
+%[gameframe_button_ctl]
+%[gameframe_button_api]
+%[autogen]
+#[Limitations](lim) {
+	#[RTL support](lim-rtl) {
+		The extension does not currently mirror the UI order on Hebrew and Arabic systems,
+		like Windows itself does.
+	}
+	#[Purpose-specific operations]() {
+		Windows works in mysterious ways and certain operations
+		(like moving the window to the side of the screen to snap it)
+		only work for windows with specific configuration.
+		
+		Messing with the game window's configuration in GameMaker is rather
+		dangerous and may result in soft-locking the game, so I don't.
+	}
+}
+#[FAQ]() {
+	#[Mac & Linux](mac-linux) {
+		The extension uses Windows-specific tricks for some operations
+		(such as resizing) so functionality on non-Windows is rather limited
+		... but also, Mac and Linux do not have the same problems as Windows
+		does - the fullscreen Just Works, for example - no need to have two
+		fullscreen modes.
+	}
+	#[GMS1 and GMS2.2.5](old) {
+		Sometime soon!
+		
+		(as soon as I have either consistent electricity
+		or consistent internet access for a day or two
+		- living in Ukraine isn't easy these days)
+	}
+}

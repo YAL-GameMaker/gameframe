@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+  <!-- Output SWF options -->
+  <output>
+    <movie outputType="Application" />
+    <movie input="" />
+    <movie path="gameframe_23\scripts\gameframe\gameframe.yy._" />
+    <movie fps="0" />
+    <movie width="0" />
+    <movie height="0" />
+    <movie version="0" />
+    <movie minorVersion="0" />
+    <movie platform="JavaScript" />
+    <movie background="#FFFFFF" />
+  </output>
+  <!-- Other classes to be compiled into your SWF -->
+  <classpaths>
+    <class path="src" />
+  </classpaths>
+  <!-- Build options -->
+  <build>
+    <option directives="sfgml.modern&#xA;sfgml_version=2.3.7&#xA;sfgml_snake_case&#xA;sfgml_dot_static=0&#xA;sfgml_linear&#xA;--sf-dump=pre&#xA;sf-std-package=gameframe_std" />
+    <option flashStrict="False" />
+    <option noInlineOnDebug="False" />
+    <option mainClass="Gameframe" />
+    <option enabledebug="False" />
+    <option additional="-dce full&#xA;--macro DocMdAuto.proc('export/gameframe', 'export/gameframe.html')" />
+  </build>
+  <!-- haxelib libraries -->
+  <haxelib>
+    <library name="sfhx" />
+    <library name="sfgml" />
+    <library name="hscript" />
+    <library name="docmd" />
+  </haxelib>
+  <!-- Class files to compile (other referenced classes will automatically be included) -->
+  <compileTargets>
+    <compile path="src\Gameframe.hx" />
+  </compileTargets>
+  <!-- Paths to exclude from the Project Explorer tree -->
+  <hiddenPaths>
+    <hidden path="obj" />
+  </hiddenPaths>
+  <!-- Executed before build -->
+  <preBuildCommand />
+  <!-- Executed after build -->
+  <postBuildCommand alwaysRun="False">cmd /C postbuild.bat gameframe_23</postBuildCommand>
+  <!-- Other project options -->
+  <options>
+    <option showHiddenPaths="False" />
+    <option testMovie="OpenDocument" />
+    <option testMovieCommand="" />
+  </options>
+  <!-- Plugin storage -->
+  <storage />
+</project>
