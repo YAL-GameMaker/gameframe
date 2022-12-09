@@ -72,6 +72,8 @@ class GfConfig {
 	 * will then scale those to effective size
 	 * (e.g. if you provided assets for 2x scale, but the system uses 1.5x,
 	 * frame UI will be drawn at 0.75x scale to compensate)
+	 * 
+	 * *NOTE:* GMS1.4 does not support DPI scaling, `display_get_dpi_x` always returns 96.
 	 */
 	public static var dpiScale = 1.;
 }

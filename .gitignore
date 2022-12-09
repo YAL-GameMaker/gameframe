@@ -4,6 +4,7 @@
 
 # haxe
 *.yy._
+*.gmx._
 sf.sfdump
 temp.dmd
 

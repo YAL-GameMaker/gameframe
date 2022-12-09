@@ -94,7 +94,9 @@ class GfState {
 	public static function restore(_force = false) {
 		if (Window.fullscreen) {
 			Window.fullscreen = false;
-			GfDelay.call0(1, () -> { restore(); });
+			GfDelay.call0(1, () -> {
+				restore();
+			});
 			return;
 		}
 		if (!_force && !isMaximized && !isFullscreen) return;
@@ -163,7 +165,7 @@ class GfState {
 					return;
 				}
 				if (Window.fullscreen) {
-					Window.fullscreen = false;
+					restore();
 				} else {
 					if (isMaximized) {
 						isFullscreen = false;

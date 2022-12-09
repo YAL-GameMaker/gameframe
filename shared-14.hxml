@@ -1,0 +1,7 @@
+shared.hxml
+-D sfgml_version=1.4.1804
+-D sfgml-gmx-macro-doc=false
+-lib sfgml
+-lib sfhx
+-dce full
+-D sfgml-main=gameframe_preinit

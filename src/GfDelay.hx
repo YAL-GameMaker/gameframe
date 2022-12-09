@@ -10,7 +10,7 @@ import gml.ds.Stack;
 class GfDelay {
 	static var queue:Queue<GfDelayItem> = new Queue();
 	static var pool:Stack<GfDelayItem> = new Stack();
-	static var frameIndex = 0;
+	public static var frameIndex = 0;
 	public static function callImpl(func:Dynamic, delay:Int, arg0:Any, arg1:Any, arg2:Any, arg3:Any) {
 		var item:GfDelayItem;
 		if (pool.isEmpty()) {

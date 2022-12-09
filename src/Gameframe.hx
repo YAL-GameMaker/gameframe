@@ -68,15 +68,12 @@ class Gameframe {
 		var _flags = 0x0, _titleHit = false;
 		var _hitSomething = true;
 		var resizePadding = GfConfig.resizePadding;
-		if (Window.fullscreen) {
-			//
-		}
-		else if (Mathf.pointInRect(mx, my,
+		if (Mathf.pointInRect(mx, my,
 			_buttons_x, _borderWidth,
 			gw - _borderWidth - (GfState.isMaximized ? 0 : resizePadding),
 			_borderWidth + _titleHeight
-		)) { // mouse over window buttons
-			//
+		)) { 
+			// mouse is over window buttons
 		}
 		else if (!GfState.isMaximized && GfConfig.canResize && !Mathf.pointInRect(mx, my,
 			resizePadding,
@@ -148,10 +145,11 @@ class Gameframe {
 		GfState.restoreRect.getWindowRect();
 		GfButtons.addDefaults();
 		
-		#if sfgml.next
+		#if sfgml_next
 		GfNative.set_shadow(true);
 		#else
 		GfDelay.call0(3, function() {
+			// on GMS1, if you try to set a shadow too early, the window simply disappears
 			if (GfState.isMaximized || GfState.isFullscreen || Window.fullscreen) return;
 			GfNative.set_shadow(true);
 		});

@@ -8,10 +8,11 @@ draw_text(room_width/2, room_height/2, "Your videogame here")
 draw_set_halign(_h)
 draw_set_valign(_v)
 var _dragFlags = gameframe_get_drag_flags();
-draw_text(5, 35,
+draw_text(5, 5 + gameframe_caption_get_overlap(),
 	sfmt("Window size: %x%", window_get_width(), window_get_height())
 	+ sfmt("\nGame size: %x%", browser_width, browser_height)
 	+ sfmt("\nDragging: % (flags=%)", _dragFlags?"yes":"no",_dragFlags)
+	+ sfmt("\nPosition: %", application_get_position())
 	//+ `\nScale: ${gameframe_effective_scale}`
 	+ "\n\nTry things:"
 	+ "\n1: Windowed"

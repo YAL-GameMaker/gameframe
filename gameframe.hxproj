@@ -19,12 +19,12 @@
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="sfgml.modern&#xA;sfgml_version=2.3.7&#xA;sfgml_snake_case&#xA;sfgml_dot_static=0&#xA;sfgml_linear&#xA;--sf-dump=pre&#xA;sf-std-package=gameframe_std" />
+    <option directives="" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="Gameframe" />
     <option enabledebug="False" />
-    <option additional="-dce full&#xA;--macro DocMdAuto.proc('export/gameframe', 'export/gameframe.html')" />
+    <option additional="--macro DocMdAuto.proc('export/gameframe', 'export/gameframe.html')&#xA;shared-23.hxml" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>

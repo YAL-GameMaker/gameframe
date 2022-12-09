@@ -39,11 +39,10 @@ The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemake
 #[Setting up]() {
 	##{
 	-	Disable the default window border in
-		Game Options - Windows - Graphics
-		<!-- --{
+		--{
 		-	GMS1: Global Game Settings - Windows - Graphics
 		-	GMS2 and GM2022+: Game Options - Windows - Graphics
-		}-->
+		}
 		("Borderless window" checkbox)
 	-	Create a new persistent object for the extension system,
 		or add code to your existing global controller object:
@@ -123,8 +122,9 @@ The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemake
 		(like moving the window to the side of the screen to snap it)
 		only work for windows with specific configuration.
 		
-		Messing with the game window's configuration in GameMaker is rather
-		dangerous and may result in soft-locking the game, so I don't.
+		However, messing with the game window's configuration
+		in GameMaker is rather dangerous and easily results in soft-locking the game,
+		so I don't.
 	}
 }
 #[FAQ]() {
@@ -134,12 +134,5 @@ The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemake
 		... but also, Mac and Linux do not have the same problems as Windows
 		does - the fullscreen Just Works, for example - no need to have two
 		fullscreen modes.
-	}
-	#[GMS1 and GMS2.2.5](old) {
-		Sometime soon!
-		
-		(as soon as I have either consistent electricity
-		or consistent internet access for a day or two
-		- living in Ukraine isn't easy these days)
 	}
 }

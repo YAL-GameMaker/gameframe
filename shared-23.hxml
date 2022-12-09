@@ -1,0 +1,9 @@
+shared.hxml
+-D sfgml_next
+-D sfgml.modern
+-D sfgml_version=2.3.7
+-D sfgml_dot_static=0
+-D sfgml_linear
+-lib sfgml
+-lib sfhx
+-dce full

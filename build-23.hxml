@@ -1,0 +1,5 @@
+shared-23.hxml
+-debug
+-cp src
+-js gameframe_23/scripts/gameframe/gameframe.yy._
+-main Gameframe

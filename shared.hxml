@@ -1,0 +1,5 @@
+-D sfgml_snake_case
+-D sf-std-package=gameframe_std
+-lib sfgml
+-lib sfhx
+-dce full
