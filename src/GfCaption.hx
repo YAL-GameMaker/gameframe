@@ -4,6 +4,7 @@ import gml.Syntax;
 import gml.assets.Font;
 import gml.assets.Sprite;
 import gml.gpu.GPU;
+import gml.gpu.Surface;
 import gml.gpu.TextAlign;
 import gml.input.Window;
 
@@ -58,6 +59,23 @@ class GfCaption {
 		var h = GfState.isMaximized ? heightMaximized : heightNormal;
 		if (h > 0) return Std.int(h);
 		return Math.round( -h * GfConfig.sprCaption.height * GfState.effectiveScale);
+	}
+	
+	/**
+	 * Returns the amount of vertical overlap between the window caption and the game's
+	 * `application_surface`, _in surface pixels_ and assuming proportional scaling mode.
+	 * 
+	 * This can be used to adjust non-GUI-layer game elements to not overlap te window caption.
+	 * 
+	 * If the window is currently in one of the fullscreen modes, returns 0.
+	 */
+	public static function getOverlap() {
+		if (Window.fullscreen || GfState.isFullscreen) return 0.;
+		var h = getHeight();
+		var rect:Array<Float> = (untyped application_get_position)();
+		var surf:Surface = (untyped application_surface);
+		var scale = (rect[2] - rect[0]) / surf.width;
+		return Math.max(0, h - rect[1]) / scale;
 	}
 	
 	/**
