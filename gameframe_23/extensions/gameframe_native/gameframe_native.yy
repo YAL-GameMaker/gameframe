@@ -47,6 +47,7 @@
         {"externalName":"gameframe_set_shadow","kind":11,"help":"","hidden":true,"returnType":2,"argCount":1,"args":[
             2,
           ],"resourceVersion":"1.0","name":"gameframe_set_shadow","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"gameframe_get_shadow","kind":11,"help":"","hidden":true,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"gameframe_get_shadow","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"gameframe_get_monitors_2","kind":11,"help":"","hidden":true,"returnType":2,"argCount":1,"args":[
             1,
           ],"resourceVersion":"1.0","name":"gameframe_get_monitors_2","tags":[],"resourceType":"GMExtensionFunction",},
@@ -63,6 +64,7 @@
         {"name":"gameframe_get_double_click_time_raw","path":"extensions/gameframe_native/gameframe_native.yy",},
         {"name":"gameframe_is_natively_minimized_raw","path":"extensions/gameframe_native/gameframe_native.yy",},
         {"name":"gameframe_set_shadow","path":"extensions/gameframe_native/gameframe_native.yy",},
+        {"name":"gameframe_get_shadow","path":"extensions/gameframe_native/gameframe_native.yy",},
         {"name":"gameframe_get_monitors_2","path":"extensions/gameframe_native/gameframe_native.yy",},
         {"name":"gameframe_check_native_extension","path":"extensions/gameframe_native/gameframe_native.yy",},
       ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},

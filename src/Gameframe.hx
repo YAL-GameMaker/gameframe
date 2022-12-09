@@ -49,6 +49,14 @@ class Gameframe {
 		}
 		GfKeyboardShortcuts.update();
 		
+		// ensure that the window does not lose the shadow
+		// (mostly after going to exclusive fullscreen and back)
+		if (!GfState.isMaximized
+			&& GfState.hasNativeExtension
+			&& GfDelay.frameIndex > 3
+			&& !(GfNative.get_shadow():Bool)
+		) GfNative.set_shadow(true);
+		
 		var mx = Std.int(Window.mouseX);
 		var my = Std.int(Window.mouseY);
 		var gw = Window.width;

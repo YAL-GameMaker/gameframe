@@ -57,10 +57,13 @@ dllx void gameframe_set_shadow(double _enable) {
 	DwmExtendFrameIntoClientArea(hwnd, &m);
 	auto style = GetWindowLong(hwnd, GWL_STYLE);
 	//trace("style=%x exstyle=%x", style, GetWindowLong(hwnd, GWL_EXSTYLE));
-	style |= WS_CAPTION; // WS_CAPTION
+	style |= WS_CAPTION;
 	SetWindowLong(hwnd, GWL_STYLE, style);
 	SetWindowPos(hwnd, nullptr, 0, 0, 0, 0, SWP_NOZORDER | SWP_NOOWNERZORDER | SWP_NOMOVE | SWP_NOSIZE | SWP_FRAMECHANGED);
 	//trace("shadow: %d", enable);
+}
+dllx double gameframe_get_shadow() {
+	return (GetWindowLongW(hwnd, GWL_STYLE) & WS_CAPTION) != 0;
 }
 
 WNDPROC window_command_proc_base = nullptr;
