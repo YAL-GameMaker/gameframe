@@ -1,7 +1,8 @@
 ## gameframe
 
 **Quick links:** [documentation](https://yal.cc/docs/gm/gameframe)
-  · [itch.io](https://yellowafterlife.itch.io/gamemaker-gameframe)  
+  · [itch.io](https://yellowafterlife.itch.io/gamemaker-gameframe)
+  · [GM Marketplace](https://marketplace.yoyogames.com/assets/11287/gameframe)  
 **Versions:** GameMaker: Studio 1.4, GMS2.2, GMS2.3/GM2022+  
 **Platforms:** Windows, Windows (YYC)
 
