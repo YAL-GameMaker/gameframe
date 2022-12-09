@@ -44,6 +44,9 @@ The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemake
 		-	GMS2 and GM2022+: Game Options - Windows - Graphics
 		}
 		("Borderless window" checkbox)
+	-	Import the respective extension for your version
+		(right-click the Extensions folder and pick "Import extension"
+		in GMS1, or "menu:Tools - Import Local Asset Package" in GMS2)
 	-	Create a new persistent object for the extension system,
 		or add code to your existing global controller object:
 		

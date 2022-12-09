@@ -6,5 +6,9 @@
         "specTypeInstSubTopLevel": true,
         "specTypeVar": true
     },
+    "rawDirectories": [
+        ".",
+        "..\/export"
+    ],
     "templateStringScript": "sfmt"
 }

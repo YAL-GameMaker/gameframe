@@ -1,5 +1,6 @@
 shared-14.hxml
 -debug
 -cp src
--js gameframe.gmx/extensions/gameframe_gml.extension.gmx._
+-js gameframe.gmx/extensions/gameframe.extension.gmx._
+-D sfgml-ext-file=gameframe.gml
 -main Gameframe

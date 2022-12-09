@@ -2,7 +2,7 @@
 
 **Quick links:** [documentation](https://yal.cc/docs/gm/gameframe)
   · [itch.io](https://yellowafterlife.itch.io/gamemaker-gameframe)  
-**Versions:** GameMaker Studio 2.3 (for now)  
+**Versions:** GameMaker: Studio 1.4, GMS2.2, GMS2.3/GM2022+  
 **Platforms:** Windows, Windows (YYC)
 
 This extension gives GameMaker games a custom window caption+border that act like a native one.

@@ -4,9 +4,7 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions>
-    <extension index="0">extensions\gameframe_gml</extension>
-    <extension index="1">extensions\gameframe_native</extension>
-    <extension index="2">extensions\gameframe_macros</extension>
+    <extension index="0">extensions\gameframe</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">

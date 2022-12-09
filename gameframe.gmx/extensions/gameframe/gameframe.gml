@@ -1,5 +1,5 @@
 #define gameframe_preinit
-// Generated at 2022-12-09 03:00:12 (1115ms) for v1.4.1804+
+// Generated at 2022-12-09 04:53:13 (1149ms) for v1.4.1804+
 /// @lint nullToAny true
 // Feather disable all
 //{ prototypes
@@ -195,7 +195,7 @@ if (window_get_fullscreen() || g_gameframe_isFullscreen_hx) {
 	return 0;
 }
 gameframe_tools_keyctl_update();
-if (!g_gameframe_isMaximized_hx && g_gameframe_delayed_frame_index > 3 && !gameframe_get_shadow()) gameframe_set_shadow(true);
+if (!g_gameframe_isMaximized_hx && g_gameframe_has_native_extension && g_gameframe_delayed_frame_index > 3 && !gameframe_get_shadow()) gameframe_set_shadow(true);
 var _mx = (window_mouse_get_x() | 0);
 var _my = (window_mouse_get_y() | 0);
 var _gw = window_get_width();
@@ -884,6 +884,13 @@ return g_gameframe_drag_flags;
 var _h = (g_gameframe_isMaximized_hx ? g_gameframe_caption_height_maximized : g_gameframe_caption_height_normal);
 if (_h > 0) return (_h | 0);
 return round(-_h * sprite_get_height(g_gameframe_spr_caption) * g_gameframe_effective_scale);
+
+#define gameframe_caption_get_overlap
+// gameframe_caption_get_overlap()->number
+if (window_get_fullscreen() || g_gameframe_isFullscreen_hx) return 0.;
+var _h = gameframe_caption_get_height();
+var _rect = application_get_position();
+return max(0, _h - _rect[1]) / ((_rect[2] - _rect[0]) / surface_get_width(application_surface));
 
 #define gameframe_caption_draw_border_default
 // gameframe_caption_draw_border_default(_x:int, _y:int, _width:int, _height:int)

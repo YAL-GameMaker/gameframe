@@ -124,18 +124,18 @@ var _hasDragFlags;
 if (_dragFlags) {
     _hasDragFlags = "yes";
 } else _hasDragFlags = "no";
-draw_text(5, 35,
-	sfmt("Window size: %x%", window_get_width(), window_get_height())
-	+ sfmt("#Game size: %x%", browser_width, browser_height)
-	+ sfmt("#Dragging: % (flags=%)", scrOnOff(_dragFlags),_dragFlags)
-	//+ `#Scale: ${gameframe_effective_scale}`
-	+ "##Try things:"
-	+ "#1: Windowed"
-	+ sfmt("#2: True fullscreen (%)", scrOnOff(window_get_fullscreen()))
-	+ sfmt("#3: Fullscreen window (%)", scrOnOff(gameframe_is_fullscreen_window()))
-	+ "#4: Change alpha"
-	+ sfmt("#5: Toggle interactions (%)", scrOnOff(gameframe_can_input))
-	+ sfmt("#6: Toggle resize (%)", scrOnOff(gameframe_can_resize))
+draw_text(5, 5 + gameframe_caption_get_overlap(),
+sfmt("Window size: %x%", window_get_width(), window_get_height())
++ sfmt("#Game size: %x%", browser_width, browser_height)
++ sfmt("#Dragging: % (flags=%)", scrOnOff(_dragFlags),_dragFlags)
+//+ `#Scale: ${gameframe_effective_scale}`
++ "##Try things:"
++ "#1: Windowed"
++ sfmt("#2: True fullscreen (%)", scrOnOff(window_get_fullscreen()))
++ sfmt("#3: Fullscreen window (%)", scrOnOff(gameframe_is_fullscreen_window()))
++ "#4: Change alpha"
++ sfmt("#5: Toggle interactions (%)", scrOnOff(gameframe_can_input))
++ sfmt("#6: Toggle resize (%)", scrOnOff(gameframe_can_resize))
 )
 </string>
           </argument>
