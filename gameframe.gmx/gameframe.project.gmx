@@ -9,10 +9,12 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_test_icon</sprite>
-    <sprite>sprites\spr_window_border</sprite>
-    <sprite>sprites\spr_window_buttons</sprite>
-    <sprite>sprites\spr_window_caption</sprite>
-    <sprite>sprites\spr_window_pixel</sprite>
+    <sprites name="gameframe">
+      <sprite>sprites\spr_gameframe_pixel</sprite>
+      <sprite>sprites\spr_gameframe_border</sprite>
+      <sprite>sprites\spr_gameframe_buttons</sprite>
+      <sprite>sprites\spr_gameframe_caption</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

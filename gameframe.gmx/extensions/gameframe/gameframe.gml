@@ -1,5 +1,5 @@
 #define gameframe_preinit
-// Generated at 2022-12-09 04:53:13 (1149ms) for v1.4.1804+
+// Generated at 2022-12-14 10:28:50 (1001ms) for v1.4.1804+
 /// @lint nullToAny true
 // Feather disable all
 //{ prototypes
@@ -72,13 +72,13 @@ g_gameframe_resize_padding = 6;
 globalvar g_gameframe_border_width; /// @is {int}
 g_gameframe_border_width = 2;
 globalvar g_gameframe_spr_border; /// @is {sprite}
-g_gameframe_spr_border = asset_get_index("spr_window_border");
+g_gameframe_spr_border = asset_get_index("spr_gameframe_border");
 globalvar g_gameframe_spr_caption; /// @is {sprite}
-g_gameframe_spr_caption = asset_get_index("spr_window_caption");
+g_gameframe_spr_caption = asset_get_index("spr_gameframe_caption");
 globalvar g_gameframe_spr_buttons; /// @is {sprite}
-g_gameframe_spr_buttons = asset_get_index("spr_window_buttons");
+g_gameframe_spr_buttons = asset_get_index("spr_gameframe_buttons");
 globalvar g_gameframe_spr_pixel; /// @is {sprite}
-g_gameframe_spr_pixel = asset_get_index("spr_window_pixel");
+g_gameframe_spr_pixel = asset_get_index("spr_gameframe_pixel");
 globalvar g_gameframe_default_cursor; /// @is {window_cursor}
 g_gameframe_default_cursor = cr_arrow;
 globalvar g_gameframe_set_cursor; /// @is {bool}
@@ -604,6 +604,7 @@ draw_sprite_stretched_ext(g_gameframe_spr_pixel, 0, argument[1], argument[2], ar
 
 #define gameframe_button_add_defaults
 // gameframe_button_add_defaults()
+g_gameframe_button_array = [];
 var _minimize = game_frame_button_create("minimize", g_gameframe_spr_buttons, 0, f_gameframe_button_add_defaults_lf);
 if (!g_gameframe_has_native_extension) _minimize[@9/* enabled */] = false;
 gameframe_std_gml_internal_ArrayImpl_push(g_gameframe_button_array, _minimize);

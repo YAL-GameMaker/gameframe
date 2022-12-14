@@ -42,13 +42,13 @@ class GfConfig {
 	 * @dmdPrefix Sprites:
 	 * Outer window border (9-slice, 2 frames - inactive, active)
 	 */
-	public static var sprBorder:Sprite = Asset.find("spr_window_border");
+	public static var sprBorder:Sprite = Asset.find("spr_gameframe_border");
 	/** Window caption (9-slice, 2 frames - inactive, active) */
-	public static var sprCaption:Sprite = Asset.find("spr_window_caption");
+	public static var sprCaption:Sprite = Asset.find("spr_gameframe_caption");
 	/** Window button icons (4 frames - minimize, maximize, restore, close) */
-	public static var sprButtons:Sprite = Asset.find("spr_window_buttons");
+	public static var sprButtons:Sprite = Asset.find("spr_gameframe_buttons");
 	/** A white square to be stretched when drawing colored rectangles */
-	public static var sprPixel:Sprite = Asset.find("spr_window_pixel");
+	public static var sprPixel:Sprite = Asset.find("spr_gameframe_pixel");
 	
 	/**
 	 * @dmdPrefix Cursor:
