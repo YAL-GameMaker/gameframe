@@ -116,6 +116,7 @@ class GfButtons {
 	}
 	
 	public static function addDefaults() {
+		array = [];
 		var minimize = new GfButton("minimize", GfConfig.sprButtons, 0, function(button) {
 			GfState.minimize();
 		});
