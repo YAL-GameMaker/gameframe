@@ -17,7 +17,8 @@ abstract GfRect(GfRectImpl) {
 	}
 	
 	public function new(x:Int = 0, y:Int = 0, w:Int = 0, h:Int = 0) {
-		this = { x: x, y: y, width: w, height: h };
+		var _rect:GfRectImpl = { x: x, y: y, width: w, height: h };
+		this = _rect;
 	}
 	
 	public function getWindowRect() {
