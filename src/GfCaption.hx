@@ -3,6 +3,7 @@ import gml.Draw;
 import gml.Syntax;
 import gml.assets.Font;
 import gml.assets.Sprite;
+import gml.ds.Color;
 import gml.gpu.GPU;
 import gml.gpu.Surface;
 import gml.gpu.TextAlign;
@@ -28,6 +29,11 @@ class GfCaption {
 	
 	/** If set, is used for drawing the above */
 	public static var font:Font = Font.defValue;
+	
+	/**
+	 * Similarly
+	 */
+	public static var textColor:Color = Color.white;
 	
 	/** Text alignment for the caption */
 	public static var textAlign:TextAlign = TextAlign.Left;
@@ -126,6 +132,7 @@ class GfCaption {
 		if (text == "") return;
 		
 		var _newFont = font;
+		var _newColor = textColor;
 		#if sfgml_next
 		var _h = GPU.halign;
 		var _v = GPU.valign;
@@ -134,10 +141,12 @@ class GfCaption {
 			_oldFont = GPU.font;
 			GPU.font = _newFont;
 		} else _oldFont = Font.defValue;
+		var _oldColor = GPU.color;
 		#else
 		if (_newFont != Font.defValue) GPU.font = _newFont;
 		#end
 		
+		GPU.color = textColor;
 		GPU.halign = textAlign;
 		GPU.valign = TextAlign.Top;
 		var _alpha = GPU.alpha;
@@ -152,6 +161,7 @@ class GfCaption {
 		
 		#if sfgml_next
 		if (_newFont != Font.defValue) GPU.font = _oldFont;
+		GPU.color = _oldColor;
 		GPU.halign = _h;
 		GPU.valign = _v;
 		#end
