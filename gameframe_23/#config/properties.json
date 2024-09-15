@@ -1,4 +1,7 @@
 {
+    "builderSettings": {
+        "runtimeVersion": "runtime-2023.8.2.152"
+    },
     "indentWithTabs": true,
     "linterPrefs": {
         "requireFields": true,

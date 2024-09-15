@@ -3,7 +3,7 @@
   <name>gameframe</name>
   <version>1.0.0</version>
   <packageID></packageID>
-  <ProductID>ACBD3CFF4E539AD869A0E8E3B4B022DD</ProductID>
+  <ProductID></ProductID>
   <date>08/12/22</date>
   <license>Free to use, also for commercial games.</license>
   <description></description>
@@ -132,7 +132,7 @@
           <argCount>2</argCount>
           <args>
             <arg>1</arg>
-            <arg>2</arg>
+            <arg>1</arg>
           </args>
         </function>
         <function>
@@ -144,7 +144,7 @@
           <argCount>2</argCount>
           <args>
             <arg>1</arg>
-            <arg>2</arg>
+            <arg>1</arg>
           </args>
         </function>
         <function>
@@ -156,7 +156,7 @@
           <argCount>2</argCount>
           <args>
             <arg>1</arg>
-            <arg>2</arg>
+            <arg>1</arg>
           </args>
         </function>
         <function>
@@ -168,7 +168,7 @@
           <argCount>2</argCount>
           <args>
             <arg>1</arg>
-            <arg>2</arg>
+            <arg>1</arg>
           </args>
         </function>
         <function>
@@ -180,7 +180,7 @@
           <argCount>2</argCount>
           <args>
             <arg>1</arg>
-            <arg>2</arg>
+            <arg>1</arg>
           </args>
         </function>
         <function>
@@ -192,7 +192,7 @@
           <argCount>2</argCount>
           <args>
             <arg>1</arg>
-            <arg>2</arg>
+            <arg>1</arg>
           </args>
         </function>
         <function>
@@ -413,7 +413,7 @@
           <name>game_frame_button_create</name>
           <externalName>game_frame_button_create</externalName>
           <kind>11</kind>
-          <help>game_frame_button_create(name:string, icon:sprite, subimg:int, onClick:function&lt;game_frame_button; void&gt;)-&gt;game_frame_button</help>
+          <help>game_frame_button_create(name:string, icon:sprite, subimg:int, onClick:function&lt;game_frame_button;void&gt;)-&gt;game_frame_button</help>
           <returnType>2</returnType>
           <argCount>4</argCount>
           <args>
@@ -657,7 +657,7 @@
           <name>game_frame_button_set_click</name>
           <externalName>game_frame_button_set_click</externalName>
           <kind>11</kind>
-          <help>game_frame_button_set_click(this:game_frame_button, value:function&lt;button:game_frame_button; void&gt;)</help>
+          <help>game_frame_button_set_click(this:game_frame_button, value:function&lt;button:game_frame_button;void&gt;)</help>
           <returnType>2</returnType>
           <argCount>2</argCount>
           <args>
@@ -669,7 +669,7 @@
           <name>game_frame_button_get_click</name>
           <externalName>game_frame_button_get_click</externalName>
           <kind>11</kind>
-          <help>game_frame_button_get_click(this:game_frame_button)-&gt;function&lt;button:game_frame_button; void&gt;</help>
+          <help>game_frame_button_get_click(this:game_frame_button)-&gt;function&lt;button:game_frame_button;void&gt;</help>
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
@@ -680,7 +680,7 @@
           <name>game_frame_button_set_get_width</name>
           <externalName>game_frame_button_set_get_width</externalName>
           <kind>11</kind>
-          <help>game_frame_button_set_get_width(this:game_frame_button, value:function&lt;button:game_frame_button; int&gt;)</help>
+          <help>game_frame_button_set_get_width(this:game_frame_button, value:function&lt;button:game_frame_button;int&gt;)</help>
           <returnType>2</returnType>
           <argCount>2</argCount>
           <args>
@@ -692,7 +692,7 @@
           <name>game_frame_button_get_get_width</name>
           <externalName>game_frame_button_get_get_width</externalName>
           <kind>11</kind>
-          <help>game_frame_button_get_get_width(this:game_frame_button)-&gt;function&lt;button:game_frame_button; int&gt;</help>
+          <help>game_frame_button_get_get_width(this:game_frame_button)-&gt;function&lt;button:game_frame_button;int&gt;</help>
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
@@ -703,7 +703,7 @@
           <name>game_frame_button_set_update</name>
           <externalName>game_frame_button_set_update</externalName>
           <kind>11</kind>
-          <help>game_frame_button_set_update(this:game_frame_button, value:function&lt;button:game_frame_button; void&gt;)</help>
+          <help>game_frame_button_set_update(this:game_frame_button, value:function&lt;button:game_frame_button;void&gt;)</help>
           <returnType>2</returnType>
           <argCount>2</argCount>
           <args>
@@ -715,7 +715,7 @@
           <name>game_frame_button_get_update</name>
           <externalName>game_frame_button_get_update</externalName>
           <kind>11</kind>
-          <help>game_frame_button_get_update(this:game_frame_button)-&gt;function&lt;button:game_frame_button; void&gt;</help>
+          <help>game_frame_button_get_update(this:game_frame_button)-&gt;function&lt;button:game_frame_button;void&gt;</help>
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
@@ -726,7 +726,7 @@
           <name>game_frame_button_set_draw_underlay</name>
           <externalName>game_frame_button_set_draw_underlay</externalName>
           <kind>11</kind>
-          <help>game_frame_button_set_draw_underlay(this:game_frame_button, value:function&lt;button:game_frame_button; x:number; y:number; width:number; height:number; void&gt;)</help>
+          <help>game_frame_button_set_draw_underlay(this:game_frame_button, value:function&lt;button:game_frame_button;x:number;y:number;width:number;height:number;void&gt;)</help>
           <returnType>2</returnType>
           <argCount>2</argCount>
           <args>
@@ -738,7 +738,7 @@
           <name>game_frame_button_get_draw_underlay</name>
           <externalName>game_frame_button_get_draw_underlay</externalName>
           <kind>11</kind>
-          <help>game_frame_button_get_draw_underlay(this:game_frame_button)-&gt;function&lt;button:game_frame_button; x:number; y:number; width:number; height:number; void&gt;</help>
+          <help>game_frame_button_get_draw_underlay(this:game_frame_button)-&gt;function&lt;button:game_frame_button;x:number;y:number;width:number;height:number;void&gt;</help>
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
@@ -749,7 +749,7 @@
           <name>game_frame_button_set_draw_icon</name>
           <externalName>game_frame_button_set_draw_icon</externalName>
           <kind>11</kind>
-          <help>game_frame_button_set_draw_icon(this:game_frame_button, value:function&lt;button:game_frame_button; x:number; y:number; width:number; height:number; void&gt;)</help>
+          <help>game_frame_button_set_draw_icon(this:game_frame_button, value:function&lt;button:game_frame_button;x:number;y:number;width:number;height:number;void&gt;)</help>
           <returnType>2</returnType>
           <argCount>2</argCount>
           <args>
@@ -761,7 +761,7 @@
           <name>game_frame_button_get_draw_icon</name>
           <externalName>game_frame_button_get_draw_icon</externalName>
           <kind>11</kind>
-          <help>game_frame_button_get_draw_icon(this:game_frame_button)-&gt;function&lt;button:game_frame_button; x:number; y:number; width:number; height:number; void&gt;</help>
+          <help>game_frame_button_get_draw_icon(this:game_frame_button)-&gt;function&lt;button:game_frame_button;x:number;y:number;width:number;height:number;void&gt;</help>
           <returnType>2</returnType>
           <argCount>1</argCount>
           <args>
@@ -1395,6 +1395,15 @@
           </args>
         </function>
         <function>
+          <name>gameframe_std_haxe_type_proto</name>
+          <externalName>gameframe_std_haxe_type_proto</externalName>
+          <kind>11</kind>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>-1</argCount>
+          <args/>
+        </function>
+        <function>
           <name>gameframe_std_haxe_class_create</name>
           <externalName>gameframe_std_haxe_class_create</externalName>
           <kind>11</kind>
@@ -1414,6 +1423,28 @@
           <returnType>2</returnType>
           <argCount>2</argCount>
           <args>
+            <arg>2</arg>
+            <arg>2</arg>
+          </args>
+        </function>
+        <function>
+          <name>gameframe_std_haxe_boot_decl</name>
+          <externalName>gameframe_std_haxe_boot_decl</externalName>
+          <kind>11</kind>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>-1</argCount>
+          <args/>
+        </function>
+        <function>
+          <name>gameframe_std_haxe_boot_odecl</name>
+          <externalName>gameframe_std_haxe_boot_odecl</externalName>
+          <kind>11</kind>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>3</argCount>
+          <args>
+            <arg>2</arg>
             <arg>2</arg>
             <arg>2</arg>
           </args>

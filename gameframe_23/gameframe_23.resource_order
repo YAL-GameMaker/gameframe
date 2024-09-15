@@ -1,0 +1,17 @@
+{
+  "FolderOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"spr_test_icon","order":4,"path":"sprites/spr_test_icon/spr_test_icon.yy",},
+    {"name":"spr_gameframe_caption","order":2,"path":"sprites/spr_gameframe_caption/spr_gameframe_caption.yy",},
+    {"name":"spr_gameframe_buttons","order":1,"path":"sprites/spr_gameframe_buttons/spr_gameframe_buttons.yy",},
+    {"name":"spr_gameframe_pixel","order":3,"path":"sprites/spr_gameframe_pixel/spr_gameframe_pixel.yy",},
+    {"name":"trace","order":1,"path":"scripts/trace/trace.yy",},
+    {"name":"fnt_caption","order":2,"path":"fonts/fnt_caption/fnt_caption.yy",},
+    {"name":"sfmt","order":1,"path":"scripts/sfmt/sfmt.yy",},
+    {"name":"fnt_test","order":1,"path":"fonts/fnt_test/fnt_test.yy",},
+    {"name":"obj_test","order":1,"path":"objects/obj_test/obj_test.yy",},
+    {"name":"rm_test","order":1,"path":"rooms/rm_test/rm_test.yy",},
+    {"name":"gameframe","order":2,"path":"scripts/gameframe/gameframe.yy",},
+    {"name":"gameframe_macros","order":1,"path":"scripts/gameframe_macros/gameframe_macros.yy",},
+  ],
+}
