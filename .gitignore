@@ -29,6 +29,7 @@ export/*.zip
 
 gameframe/autogen.cpp
 gameframe_23/scripts/gameframe/gameframe.gml
+gameframe.gmx/extensions/gameframe/gameframe.gml
 
 *.sdf
 help.rtf
