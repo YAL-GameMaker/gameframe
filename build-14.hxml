@@ -4,3 +4,4 @@ shared-14.hxml
 -js gameframe.gmx/extensions/gameframe.extension.gmx._
 -D sfgml-ext-file=gameframe.gml
 -main Gameframe
+-D sfgml_array_decl=0
